@@ -9,43 +9,82 @@
 
     //bai 1//
 
-//  inputdiemtoan = prompt("nhap diem toan vao day");
-//  inputdiemvatly = prompt("nhap diem vat ly vao day");
-//  inputdiemhoa = prompt("nhap diem hoa vao day");
-//
-//  let diemtoan = parseInt(inputdiemtoan);
-//  let diemvatly = parseInt(inputdiemvatly);
-//  let diemhoa = parseInt(inputdiemvatly);
-//  let diemtong = diemtoan+diemvatly+diemhoa;
-//  let diemtrungbinh =(diemtoan+diemvatly+diemhoa)/3;
-//
-// document.write("diemtrungbinh la:" + diemtrungbinh);
-// document.write("diemtong la:" + diemtong);
+    //  inputdiemtoan = prompt("nhap diem toan vao day");
+    //  inputdiemvatly = prompt("nhap diem vat ly vao day");
+    //  inputdiemhoa = prompt("nhap diem hoa vao day");
+    //
+    //  let diemtoan = parseInt(inputdiemtoan);
+    //  let diemvatly = parseInt(inputdiemvatly);
+    //  let diemhoa = parseInt(inputdiemvatly);
+    //  let diemtong = diemtoan+diemvatly+diemhoa;
+    //  let diemtrungbinh =(diemtoan+diemvatly+diemhoa)/3;
+    //
+    // document.write("diemtrungbinh la:" + diemtrungbinh);
+    // document.write("diemtong la:" + diemtong);
 
-//bai2//
+    //bai2//
 
 
-// inputdoC =prompt("nhap do C vao day");
-//  let doC =parseInt(inputdoC);
-//  let doF= doC*9/5+32 ;
-//  document.write("do F la"+doF)
+    // inputdoC =prompt("nhap do C vao day");
+    //  let doC =parseInt(inputdoC);
+    //  let doF= doC*9/5+32 ;
+    //  document.write("do F la"+doF)
 
-//bai 3//
-// inputbankinh =prompt("nhap ban kinh hinh tron vao day");
-//     let pi=3.14;
-//     let bankinh = parseInt(inputbankinh);
-//     let dientichhinhtron = pi*bankinh*bankinh;
-//     document.write("dien tich hinh tron:" +dientichhinhtron);
+    //bai 3//
+    // inputbankinh =prompt("nhap ban kinh hinh tron vao day");
+    //     let pi=3.14;
+    //     let bankinh = parseInt(inputbankinh);
+    //     let dientichhinhtron = pi*bankinh*bankinh;
+    //     document.write("dien tich hinh tron:" +dientichhinhtron);
 
     //bai 4 //
 
-    inputbankinh =prompt("nhap ban kinh hinh tron vao day");
-    let pi=3.14;
-    let bankinh = parseInt(inputbankinh);
-    let chuvihinhtron = 2*pi*bankinh;
-    document.write("chu vi hinh tron:" +chuvihinhtron);
-
-
+    // inputbankinh =prompt("nhap ban kinh hinh tron vao day");
+    // let pi=3.14;
+    // let bankinh = parseInt(inputbankinh);
+    // let chuvihinhtron = 2*pi*bankinh;
+    // document.write("chu vi hinh tron:" +chuvihinhtron);
 </script>
+
+<table>
+    <tr>
+        <th>Amount</th>
+        <th style="width =300px">From Currency</th>
+        <th style="width =300px">To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="dauvao">
+        </td>
+        <td>
+            <select name="" id="so1">
+                <option value="a">VND</option>
+                <option value="b">USD</option>
+            </select>
+        </td>
+        <td>
+            <select name="" id="so2">
+                <option value="a">VND</option>
+                <option value="b">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="lamgido()"> Convert</button>
+        </td>
+    </tr>
+</table>
+<script>
+function lamgido(){
+    let giatrivao =document.getElementById('dauvao').value;
+    let so1 =document.getElementById('so1').value;
+    let so2 =document.getElementById('so2').value;
+    if (so1 == so2){alert(giatrivao);}
+    if (so1 =="a"&& so2=="b"){alert(giatrivao/23000);}
+    if (so1== "b" && so2== "a") {alert(giatrivao*23000);}
+
+}
+</script>
+
 </body>
 </html>
